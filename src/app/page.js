@@ -6,8 +6,8 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <MaxWidthWrapper>
-      <div className='py-20 flex flex-col items-center max-w-3xl'>
-        <div className='flex justify-between gap-12'>
+      <div className='py-20 mx-auto flex flex-col items-center max-w-3xl'>
+        <div className='flex flex-col md:flex-row justify-between gap-12'>
           <div className='relative'>
             <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
               Your best market to invest and make{' '}
