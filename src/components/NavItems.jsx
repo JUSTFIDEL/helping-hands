@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { buttonVariants } from './ui/button'
 
+const user = true
+
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState(null)
   return (

@@ -12,20 +12,20 @@ const Navbar = () => {
             <div className='flex h-16 items-center justify-between'>
               {/* TODO: Mobile nav */}
 
-              <div className='ml-4 flex lg:ml-0'>
+              <div className=' flex lg:ml-0'>
                 <Link href='/' className='flex flex-row'>
-                  <Image
+                  {/* <Image
                     alt='logo'
                     src='/images/hh1.png'
                     width={40}
                     height={40}
                     className='hidden sm:block rounded-full'
-                  />
+                  /> */}
                   <Image
                     alt='logo'
                     src='/images/hh2.png'
-                    width={80}
-                    height={40}
+                    width={70}
+                    height={30}
                     className='pl-2'
                   />
                 </Link>
