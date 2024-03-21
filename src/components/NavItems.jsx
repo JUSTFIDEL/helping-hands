@@ -7,7 +7,7 @@ import { buttonVariants } from './ui/button'
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState(null)
   return (
-    <div className='flex gap-4 h-full mr-4 items-center cursor-pointer'>
+    <div className='flex gap-4 h-full items-center cursor-pointer'>
       <Link className='navlinks' href='/dashboard'>
         Dashboard
       </Link>
