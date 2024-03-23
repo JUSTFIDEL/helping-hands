@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Register() {
   return (
     <>
-      <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
+      <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-10 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
           <Image
             src='/images/hh2.png'
@@ -13,12 +13,12 @@ export default function Register() {
             width={50}
             height={20}
           />
-          <h2 className='mt-10 text-center text-2xl font-bold leading-6 tracking-tight text-gray-900'>
+          <h2 className='mt-4 text-center text-2xl font-bold leading-6 tracking-tight text-gray-900'>
             Create your account
           </h2>
         </div>
 
-        <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
+        <div className='mt-6 sm:mx-auto sm:w-full sm:max-w-sm'>
           <form className='space-y-6' action='#' method='POST'>
             <div>
               <label
@@ -94,10 +94,10 @@ export default function Register() {
           <p className='mt-10 text-center text-sm text-gray-500'>
             Already have an account?{' '}
             <Link
-              href='#'
+              href='/login'
               className='font-semibold leading-6 text-indigo-600 hover:text-indigo-500'
             >
-              Log in
+              Sign in
             </Link>
           </p>
         </div>
