@@ -53,9 +53,9 @@ export default function Home() {
             <Link href='/register' className={buttonVariants()}>
               Register Now &rarr;
             </Link>
-            <Link href='/login' className={buttonVariants()}>
-              Login &rarr;
-            </Link>
+            <Button variant={'outline'} px-4 className='text-blue-600'>
+              <Link href='/login'>Login &rarr;</Link>
+            </Button>
           </div>
         </div>
 
