@@ -70,7 +70,7 @@ export default function Home() {
                 Register Now &rarr;
               </Link>
               <Button variant={'outline'} className='text-blue-600 px-4'>
-                <Link href='/login'>Login &rarr;</Link>
+                <Link href='/login'>Sign In &rarr;</Link>
               </Button>
             </div>
           </div>
