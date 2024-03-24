@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Register from './register/page'
+import Image from 'next/image'
 
 const perks = [
   {
@@ -39,23 +40,39 @@ export default function Home() {
   return (
     <>
       <MaxWidthWrapper>
-        <div className='py-10 sm:py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
-          <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
-            Your best market to invest and make{' '}
-            <span className='text-blue-600'>MONEY</span> while asleep.
-          </h1>
-          <p className='mt-6 text-base max-w-prose text-muted-foreground'>
-            Welcome to Helping-Hands Investment. Where every member is verified
-            and ready to help each other by combining our resources to create a
-            larger capital for a larger interest for all members.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 mt-6'>
-            <Link href='/register' className={buttonVariants()}>
-              Register Now &rarr;
-            </Link>
-            <Button variant={'outline'} px-4 className='text-blue-600'>
-              <Link href='/login'>Login &rarr;</Link>
-            </Button>
+        <div className='py-10 sm:py-20 mx-auto max-w-4xl items-center'>
+          <div className='flex flex-col items-center'>
+            <div className='flex flex-col md:flex-row gap-10'>
+              <div className='flex-1 text-center md:text-left'>
+                <h1 className='text-4xl font-bold tracking-tight text-gray-900 md:text-6xl'>
+                  Your best market to invest and make{' '}
+                  <span className='text-blue-600'>MONEY</span> while asleep.
+                </h1>
+                <p className='mt-6 text-base max-w-prose text-muted-foreground'>
+                  Welcome to Helping-Hands Investment. Where every member is
+                  verified and ready to help each other by combining our
+                  resources to create a larger capital for a larger interest for
+                  all members.
+                </p>
+              </div>
+              <div className='clip-img flex-1 relative '>
+                <Image
+                  src='/images/hero1.jpg'
+                  fill
+                  alt='hero'
+                  className='absolute'
+                />
+              </div>
+            </div>
+
+            <div className='flex flex-col md:flex-row gap-4 mt-6'>
+              <Link href='/register' className={buttonVariants()}>
+                Register Now &rarr;
+              </Link>
+              <Button variant={'outline'} className='text-blue-600 px-4'>
+                <Link href='/login'>Login &rarr;</Link>
+              </Button>
+            </div>
           </div>
         </div>
 

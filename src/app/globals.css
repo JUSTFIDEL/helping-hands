@@ -65,3 +65,8 @@
 .navlink:active {
   font-weight: bold;
 } */
+
+.clip-img {
+  clip-path: polygon(27.45% 0%, 100% 0%, 100% 100%, 40.46% 100%, 0.5% 40.9%);
+  background-color: #51a7fd;
+}
