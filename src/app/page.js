@@ -41,6 +41,7 @@ export default function Home() {
     <>
       <MaxWidthWrapper>
         <div className='relative mx-auto max-w-5xl items-center'>
+          {/* mobile */}
           <div className='sm:hidden'>
             <div className='sm:hidden relative w-full h-[40vh]'>
               <Image
@@ -74,6 +75,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* desktop */}
           <div className='hidden sm:flex'>
             <div className='sm:flex flex-1 flex-col text-center sm:text-left absolute top-20 pl-10 z-10'>
               <h1 className='font-bold tracking-tight text-6xl max-w-[45vw] text-gray-900'>
@@ -87,11 +89,11 @@ export default function Home() {
                 members.
               </p>
 
-              <div className='flex-row gap-4 mt-6 '>
+              <div className='flex-row gap-6 mt-6 '>
                 <Link href='/register' className={buttonVariants()}>
                   Register Now &rarr;
                 </Link>
-                <Button variant={'outline'} className='text-blue-600 px-4'>
+                <Button variant={'outline'} className='text-blue-600 px-4 ml-4'>
                   <Link href='/login'>Sign In &rarr;</Link>
                 </Button>
               </div>
@@ -141,7 +143,7 @@ export default function Home() {
         </div>
       </MaxWidthWrapper> */}
 
-      <section className='border-t border-gray-200 bg-gray-100'>
+      {/* <section className='border-t border-gray-200 bg-gray-100'>
         <MaxWidthWrapper className='py-20'>
           <div className='grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
             {perks.map((perk) => (
@@ -171,10 +173,10 @@ export default function Home() {
             ))}
           </div>
         </MaxWidthWrapper>
-      </section>
+      </section> */}
 
-      <section className='border-t border-gray-200 bg-blue-200'>
-        <MaxWidthWrapper className='py-10'>
+      <section className='border-t border-gray-200 bg-gray-100 mt-6'>
+        <MaxWidthWrapper className='py-2'>
           <Register />
         </MaxWidthWrapper>
       </section>
