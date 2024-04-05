@@ -175,7 +175,7 @@ export default function Home() {
         </MaxWidthWrapper>
       </section> */}
 
-      <section className='border-t border-gray-200 bg-gray-100 mt-6'>
+      <section className='border-t border-gray-200 bg-gray-100 mt-8'>
         <MaxWidthWrapper className='py-2'>
           <Register />
         </MaxWidthWrapper>
