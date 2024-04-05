@@ -50,13 +50,13 @@ export default function Home() {
                 alt='hero'
                 className='absolute'
               />
-            </div>
-
-            <div className='flex-1 text-center md:text-left absolute top-2 px-4 sm:hidden z-10'>
-              <h1 className='text-4xl font-bold tracking-tight text-white'>
-                Your best market to invest and make{' '}
-                <span className='text-blue-600'>MONEY</span> while asleep.
-              </h1>
+              <div className='flex flex-1 text-center absolute px-4 sm:hidden z-10 justify-center items-center m-auto'>
+                <h1 className='text-4xl font-bold tracking-tight text-yellow-500 m-auto'>
+                  Your best market to invest and make{' '}
+                  <span className='text-[40px] text-blue-700'>MONEY</span> while
+                  asleep.
+                </h1>
+              </div>
             </div>
           </div>
           <div className='sm:hidden'>
