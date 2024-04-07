@@ -1,10 +1,15 @@
+'use client'
+
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import Image from 'next/image'
 import NavItems from './NavItems'
 import { buttonVariants } from './ui/button'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
   const user = null
 
   return (
@@ -12,9 +17,10 @@ const Navbar = () => {
       <header className='relative bg-white'>
         <MaxWidthWrapper>
           <div className='border-b border-gray-200'>
-            <div className='flex h-16 items-center justify-between'>
+            <div className='flex h-16 items-center justify-between relative'>
               {/* TODO: Mobile nav */}
 
+              {/* Logo */}
               <div className=' flex lg:ml-0'>
                 <Link href='/' className='flex flex-row'>
                   {/* <Image
@@ -34,12 +40,16 @@ const Navbar = () => {
                 </Link>
               </div>
 
-              <div className='hidden z-50 lg:ml-8 lg:block lg:self-stretch'>
+              {/* <div className='hidden z-50 lg:ml-8 lg:block lg:self-stretch'>
                 <NavItems />
+              </div> */}
+
+              <div className='sm:hidden absolute ml-auto flex flex-col justify-end right-0'>
+                {isOpen ? <X /> : <Menu />}
               </div>
 
               <div className='ml-auto flex items-center'>
-                <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
+                <div className='hidden sm:flex sm:flex-1 sm:items-center sm:justify-end sm:space-x-6'>
                   {user ? null : (
                     <Link
                       href='/login'
