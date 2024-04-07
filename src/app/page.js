@@ -50,7 +50,7 @@ export default function Home() {
                 alt='hero'
                 className='absolute'
               />
-              <div className='flex flex-1 text-center absolute px-4 sm:hidden z-10 justify-center items-center m-auto'>
+              <div className='text-center absolute px-4 sm:hidden z-10 m-auto top-0 left-0 bottom-0 right-0 flex items-center'>
                 <h1 className='text-4xl font-bold tracking-tight text-yellow-500 m-auto'>
                   Your best market to invest and make{' '}
                   <span className='text-[40px] text-blue-700'>MONEY</span> while
