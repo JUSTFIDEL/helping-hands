@@ -51,9 +51,9 @@ export default function Home() {
                 className='absolute'
               />
               <div className='text-center absolute px-4 sm:hidden z-10 m-auto top-0 left-0 bottom-0 right-0 flex items-center'>
-                <h1 className='text-4xl font-bold tracking-tight text-yellow-500 m-auto'>
+                <h1 className='text-4xl font-bold tracking-tight text-yellow-400 m-auto'>
                   Your best market to invest and make{' '}
-                  <span className='text-[40px] text-blue-700'>MONEY</span> while
+                  <span className='text-[40px] text-blue-600'>MONEY</span> while
                   asleep.
                 </h1>
               </div>
