@@ -54,7 +54,7 @@ export default function Home() {
                 className='absolute'
               />
               <div className='text-center absolute px-4 sm:hidden z-10 m-auto top-0 left-0 bottom-0 right-0 flex items-center'>
-                <h1 className='text-4xl font-bold tracking-tight text-yellow-400 m-auto'>
+                <h1 className='text-4xl font-bold tracking-tight text-amber-500 m-auto'>
                   Your best market to invest and make{' '}
                   <span className='text-[40px] text-blue-600'>MONEY</span> while
                   asleep.
@@ -81,7 +81,7 @@ export default function Home() {
           {/* desktop */}
           <div className='hidden sm:flex'>
             <div className='sm:flex flex-1 flex-col text-center sm:text-left absolute top-20 pl-10 z-10'>
-              <h1 className='font-bold tracking-tight text-6xl max-w-[45vw] text-gray-900'>
+              <h1 className='font-bold tracking-tight text-6xl max-w-[45vw] text-amber-500'>
                 Your best market to invest and make{' '}
                 <span className='text-blue-600'>MONEY</span> while asleep.
               </h1>
