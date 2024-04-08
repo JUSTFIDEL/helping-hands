@@ -42,29 +42,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <div className='sm:hidden relative transition-all'>
-        <div className='flex flex-1 flex-col sm:hidden absolute bg-white w-full min-h-[83vh] top-0 right-[100%] z-[60]'>
-          {user ? null : (
-            <Link
-              href='/login'
-              className={buttonVariants({ variant: 'ghost' })}
-            >
-              Log In
-            </Link>
-          )}
-
-          {user ? (
-            <p></p>
-          ) : (
-            <Link
-              href='/register'
-              className={buttonVariants({ variant: 'ghost' })}
-            >
-              Register
-            </Link>
-          )}
-        </div>
-      </div> */}
       <MaxWidthWrapper>
         <div className='relative mx-auto max-w-5xl items-center'>
           {/* mobile */}
@@ -116,7 +93,7 @@ export default function Home() {
               </p>
 
               <div className='flex-row gap-6 mt-6 '>
-                <Link href='/register' className={buttonVariants()}>
+                <Link href='#register' className={buttonVariants()}>
                   Register Now &rarr;
                 </Link>
                 <Button variant={'outline'} className='text-blue-600 px-4 ml-4'>
@@ -201,7 +178,10 @@ export default function Home() {
         </MaxWidthWrapper>
       </section> */}
 
-      <section className='border-t border-gray-200 bg-gray-100 mt-8'>
+      <section
+        className='border-t border-gray-200 bg-gray-100 mt-8'
+        id='register'
+      >
         <MaxWidthWrapper className='py-2'>
           <Register />
         </MaxWidthWrapper>
