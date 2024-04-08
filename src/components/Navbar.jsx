@@ -10,6 +10,7 @@ import { useState } from 'react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  // const [isClose, setIsClose] = useState(true)
   const user = null
 
   return (
@@ -36,6 +37,11 @@ const Navbar = () => {
                     width={70}
                     height={30}
                     className='pl-2'
+                    onClick={() =>
+                      setIsOpen((isOpen) => {
+                        !isOpen
+                      })
+                    }
                   />
                 </Link>
               </div>
@@ -45,7 +51,15 @@ const Navbar = () => {
               </div> */}
 
               <div className='sm:hidden absolute ml-auto flex flex-col justify-end right-0'>
-                {isOpen ? <X /> : <Menu />}
+                {isOpen ? (
+                  <button onClick={() => setIsOpen(!isOpen)}>
+                    <X />
+                  </button>
+                ) : (
+                  <button onClick={() => setIsOpen(!isOpen)}>
+                    <Menu />
+                  </button>
+                )}
               </div>
 
               <div className='ml-auto flex items-center'>
@@ -86,6 +100,105 @@ const Navbar = () => {
                       />
                     </div>
                   )}
+                </div>
+              </div>
+
+              <div
+                className='ml-auto flex items-center sm:hidden'
+                onClick={() =>
+                  setIsOpen((isOpen) => {
+                    !isOpen
+                  })
+                }
+              >
+                <div
+                  className={`flex flex-1 flex-col sm:hidden absolute bg-white w-full h-screen top-12 right-0 z-[60] ${
+                    isOpen ? 'p-12 sm:p-0 block' : 'hidden'
+                  }`}
+                >
+                  {user ? (
+                    <Link
+                      href='/'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Home
+                    </Link>
+                  ) : (
+                    <Link
+                      href='/login'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Log In
+                    </Link>
+                  )}
+
+                  {user ? (
+                    <Link
+                      href='/dashboard'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Dashboard
+                    </Link>
+                  ) : null}
+
+                  {user ? null : (
+                    <Link
+                      href='/register'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Register
+                    </Link>
+                  )}
+
+                  {user ? (
+                    <Link
+                      href='/about'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      About
+                    </Link>
+                  ) : (
+                    <Link
+                      href='/about'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      About
+                    </Link>
+                  )}
+
+                  {user ? (
+                    <Link
+                      href='/contact'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Contact Us
+                    </Link>
+                  ) : (
+                    <Link
+                      href='/contact'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Contact Us
+                    </Link>
+                  )}
+
+                  {user ? (
+                    <Link
+                      href='/logout'
+                      className={buttonVariants({ variant: 'ghost' })}
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      Logout
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </div>

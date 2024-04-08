@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <div className='sm:hidden relative transition-all'>
+      {/* <div className='sm:hidden relative transition-all'>
         <div className='flex flex-1 flex-col sm:hidden absolute bg-white w-full min-h-[83vh] top-0 right-[100%] z-[60]'>
           {user ? null : (
             <Link
@@ -64,7 +64,7 @@ export default function Home() {
             </Link>
           )}
         </div>
-      </div>
+      </div> */}
       <MaxWidthWrapper>
         <div className='relative mx-auto max-w-5xl items-center'>
           {/* mobile */}
