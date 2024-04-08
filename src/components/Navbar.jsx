@@ -50,7 +50,8 @@ const Navbar = () => {
                 <NavItems />
               </div> */}
 
-              <div className='sm:hidden absolute ml-auto flex flex-col justify-end right-0'>
+              {/* hamburger menu */}
+              <div className='sm:hidden absolute ml-auto flex flex-col justify-end right-0 transition-all'>
                 {isOpen ? (
                   <button onClick={() => setIsOpen(!isOpen)}>
                     <X />
@@ -62,6 +63,7 @@ const Navbar = () => {
                 )}
               </div>
 
+              {/* Desktop  */}
               <div className='ml-auto flex items-center'>
                 <div className='hidden sm:flex sm:flex-1 sm:items-center sm:justify-end sm:space-x-6'>
                   {user ? null : (
@@ -112,7 +114,7 @@ const Navbar = () => {
                 }
               >
                 <div
-                  className={`flex flex-1 flex-col sm:hidden absolute bg-white w-full h-screen top-12 right-0 z-[60] ${
+                  className={`flex flex-1 flex-col sm:hidden absolute bg-white w-full h-screen top-12 right-0 z-[60] transition ${
                     isOpen ? 'p-12 sm:p-0 block' : 'hidden'
                   }`}
                 >
