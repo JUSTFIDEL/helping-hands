@@ -1,3 +1,5 @@
+'use client'
+
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import { Button, buttonVariants } from '@/components/ui/button'
 import {
@@ -12,33 +14,22 @@ import {
 import Link from 'next/link'
 import Register from './register/page'
 import Image from 'next/image'
+import { FcGoogle } from 'react-icons/fc'
 
-const perks = [
-  {
-    name: 'Light Portfolio',
-    duration: '7 Days Package',
-    Icon: Lightbulb,
-    description: 'Invest #5,000 - #50,000 and get 20% in 7day',
-    link: '/login',
-  },
-  {
-    name: 'Medium Portfolio',
-    duration: '15 Days Package',
-    Icon: SunMedium,
-    description: 'Invest #50,001 - #200,000 and get 30% in 15days',
-    link: '/login',
-  },
-  {
-    name: 'Large Portfolio',
-    duration: '30 Days Package',
-    Icon: Target,
-    description: 'Invest #200,001 and above and get 45% in 30days',
-    link: '/login',
-  },
-]
+import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
 
+//
 export default function Home() {
   const user = null
+
+  const { data: session } = useSession()
+  const router = useRouter()
+
+  if (session) {
+    router.replace('/dashboard')
+    return null
+  }
 
   return (
     <>
@@ -75,6 +66,15 @@ export default function Home() {
               <Button variant={'outline'} className='text-blue-600 px-4'>
                 <Link href='/login'>Sign In &rarr;</Link>
               </Button>
+              <Button
+                variant={'outline'}
+                className='text-blue-600 px-4'
+                onClick={() => {
+                  signIn('google')
+                }}
+              >
+                <FcGoogle /> <span className='ml-2'>Login with Google</span>
+              </Button>
             </div>
           </div>
 
@@ -96,8 +96,17 @@ export default function Home() {
                 <Link href='#register' className={buttonVariants()}>
                   Register Now &rarr;
                 </Link>
-                <Button variant={'outline'} className='text-blue-600 px-4 ml-4'>
+                <Button variant={'outline'} className='text-blue-600 px-4 mx-6'>
                   <Link href='/login'>Sign In &rarr;</Link>
+                </Button>
+                <Button
+                  variant={'outline'}
+                  className='text-blue-600 px-4'
+                  onClick={() => {
+                    signIn('google')
+                  }}
+                >
+                  <FcGoogle /> <span className='ml-2'>Login with Google</span>
                 </Button>
               </div>
             </div>
