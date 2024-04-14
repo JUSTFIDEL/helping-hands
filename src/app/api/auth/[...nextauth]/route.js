@@ -19,7 +19,7 @@ const handler = NextAuth({
     async signIn({ account, profile, user, credentials }) {
       try {
         await connectedToDB()
-        const checkEmail = await User.find({ email: user.email })
+        const checkEmail = await User.findAll({ email: user.email })
 
         if (checkEmail.length == 0) {
           await User.insertMany({ name: user.name, email: user.email })
