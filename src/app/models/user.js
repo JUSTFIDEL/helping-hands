@@ -13,10 +13,10 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
-  confirmpassword: {
-    type: String,
-    required: true,
-  },
+  // confirmpassword: {
+  //  type: String,
+  //   required: true,
+  // },
 })
 
 export default models.User || model('User', UserSchema)
